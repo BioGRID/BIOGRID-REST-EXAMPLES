@@ -13,9 +13,8 @@ interaction_id = 439969
 request_url = cfg.BASE_URL + "/interactions/" + str(interaction_id)
 
 # These parameters can be modified to match any search criteria following
-# the rules outlined in the Wiki: https://wiki.thebiogrid.org/doku.php/orcs:webservice
-# In this particular instance, we've chosen to return results in json format and to limit
-# values in the SCORE.1 column to the range of 0.9 and 0.98
+# the rules outlined in the Wiki: https://wiki.thebiogrid.org/doku.php/biogridrest
+# In this particular instance, we've chosen to return results in json format
 params = {
     "accesskey": cfg.ACCESS_KEY,
     "format": "json"
@@ -59,7 +58,9 @@ Output as of version 4.0:
 }
 """
 
-# Fetch again but in tab2 format
+# These parameters can be modified to match any search criteria following
+# the rules outlined in the Wiki: https://wiki.thebiogrid.org/doku.php/biogridrest
+# In this particular instance, we've chosen to return results in tab2 format with a header
 params = {
     "accesskey": cfg.ACCESS_KEY,
     "format": "tab2",

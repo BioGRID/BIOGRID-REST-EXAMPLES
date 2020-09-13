@@ -14,16 +14,13 @@ request_url = cfg.BASE_URL + "/organisms"
 # These parameters can be modified to match any search criteria following
 # the rules outlined in the Wiki: https://wiki.thebiogrid.org/doku.php/biogridrest
 # In this particular instance, we've chosen just the format to use in json
-params = {
-    "accesskey": cfg.ACCESS_KEY,
-    "format": "json"
-}
+params = {"accesskey": cfg.ACCESS_KEY, "format": "json"}
 
-r = requests.get( request_url, params = params )
-organisms = r.json( )
+r = requests.get(request_url, params=params)
+organisms = r.json()
 
 # Pretty print out the results
-print( json.dumps(organisms, indent=4, sort_keys=True) )
+print(json.dumps(organisms, indent=4, sort_keys=True))
 
 """ 
 Expected Output as of version 4.0:
@@ -230,4 +227,4 @@ Expected Output as of version 4.0:
     "9978": "Ochotona princeps",
     "9986": "Oryctolagus cuniculus"
 }
-""" 
+"""

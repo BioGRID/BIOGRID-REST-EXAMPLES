@@ -12,28 +12,28 @@ from core import config as cfg
 request_url = cfg.BASE_URL + "/interactions"
 
 # List of genes to search for
-geneList = ["STE11","NMD4"] # Yeast Genes STE11 and NMD4
+geneList = ["STE11", "NMD4"]  # Yeast Genes STE11 and NMD4
 evidenceList = ["POSITIVE GENETIC", "PHENOTYPIC ENHANCEMENT"]
 
 # These parameters can be modified to match any search criteria following
 # the rules outlined in the Wiki: https://wiki.thebiogrid.org/doku.php/biogridrest
 params = {
     "accesskey": cfg.ACCESS_KEY,
-    "format": "tab2", # Return results in TAB2 format
-    "geneList": "|".join(geneList), # Must be | separated
-    "searchNames": "true", # Search against official names
-    "includeInteractors": "true", # Set to true to get any interaction involving EITHER gene, set to false to get interactions between genes
-    "taxId" : 559292, # Limit to Saccharomyces cerevisiae
-    "evidenceList": "|".join(evidenceList), # Exclude these two evidence types
-    "includeEvidence": "false", # If false "evidenceList" is evidence to exclude, if true "evidenceList" is evidence to show
-    "includeHeader": "true"
+    "format": "tab2",  # Return results in TAB2 format
+    "geneList": "|".join(geneList),  # Must be | separated
+    "searchNames": "true",  # Search against official names
+    "includeInteractors": "true",  # Set to true to get any interaction involving EITHER gene, set to false to get interactions between genes
+    "taxId": 559292,  # Limit to Saccharomyces cerevisiae
+    "evidenceList": "|".join(evidenceList),  # Exclude these two evidence types
+    "includeEvidence": "false",  # If false "evidenceList" is evidence to exclude, if true "evidenceList" is evidence to show
+    "includeHeader": "true",
 }
 
-r = requests.get( request_url, params = params )
+r = requests.get(request_url, params=params)
 interactions = r.text
 
 # Pretty print out the results
-print( interactions )
+print(interactions)
 
 """ 
 Output as of version 4.0:

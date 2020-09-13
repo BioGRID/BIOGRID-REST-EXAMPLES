@@ -15,16 +15,13 @@ request_url = cfg.BASE_URL + "/interactions/" + str(interaction_id)
 # These parameters can be modified to match any search criteria following
 # the rules outlined in the Wiki: https://wiki.thebiogrid.org/doku.php/biogridrest
 # In this particular instance, we've chosen to return results in json format
-params = {
-    "accesskey": cfg.ACCESS_KEY,
-    "format": "json"
-}
+params = {"accesskey": cfg.ACCESS_KEY, "format": "json"}
 
-r = requests.get( request_url, params = params )
-interaction = r.json( )
+r = requests.get(request_url, params=params)
+interaction = r.json()
 
 # Pretty print out the results
-print( json.dumps(interaction, indent=4, sort_keys=True) )
+print(json.dumps(interaction, indent=4, sort_keys=True))
 
 """ 
 Output as of version 4.0:
@@ -61,17 +58,13 @@ Output as of version 4.0:
 # These parameters can be modified to match any search criteria following
 # the rules outlined in the Wiki: https://wiki.thebiogrid.org/doku.php/biogridrest
 # In this particular instance, we've chosen to return results in tab2 format with a header
-params = {
-    "accesskey": cfg.ACCESS_KEY,
-    "format": "tab2",
-    "includeHeader": "true"
-}
+params = {"accesskey": cfg.ACCESS_KEY, "format": "tab2", "includeHeader": "true"}
 
-r = requests.get( request_url, params = params )
+r = requests.get(request_url, params=params)
 interaction = r.text
 
 # Pretty print out the results
-print( interaction )
+print(interaction)
 
 """ 
 Output as of version 4.0:

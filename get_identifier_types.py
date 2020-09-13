@@ -14,16 +14,13 @@ request_url = cfg.BASE_URL + "/identifiers"
 # These parameters can be modified to match any search criteria following
 # the rules outlined in the Wiki: https://wiki.thebiogrid.org/doku.php/biogridrest
 # In this particular instance, we've chosen just the format to use in tab
-params = {
-    "accesskey": cfg.ACCESS_KEY,
-    "format": "tab"
-}
+params = {"accesskey": cfg.ACCESS_KEY, "format": "tab"}
 
-r = requests.get( request_url, params = params )
+r = requests.get(request_url, params=params)
 identifiers = r.text
 
 # Pretty print out the results
-print( identifiers )
+print(identifiers)
 
 """ 
 Expected Output as of version 4.0:
@@ -77,4 +74,4 @@ WORMBASE
 WORMBASE-OLD
 XENBASE
 ZFIN
-""" 
+"""

@@ -20,4 +20,10 @@ Sample code for accessing the BioGRID Rest Service and working with the resultin
 + After completing the configuration steps above. Simply run: **python \<script name\>** at the command prompt. Example: **python get_organisms.py**
 
 ## Examples
++ [**get_experimental_evidence_types.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_experimental_evidence_types.py.py) - Obtain a list of the supported experimental evidence types in BioGRID
++ [**get_identifier_types.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_identifier_types.py) - Obtain a list of the supported identifier types in BioGRID
++ [**get_interaction.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_interaction.py) - Obtain a single interaction record by interaction id
++ [**get_interactions_by_gene.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_interactions_by_gene.py) - Obtain a list of interactions by one or more gene identifiers
++ [**get_interactions_by_pubmed.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_interactions_by_pubmed.py) - Obtain a list of interactions by one or more pubmed ids
++ [**get_interactions_for_pandas.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_interactions_for_pandas.py) - Obtain a list of interactions and add them to a pandas dataframe
 + [**get_organisms.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_organisms.py) - Obtain currently supported organism names and ids

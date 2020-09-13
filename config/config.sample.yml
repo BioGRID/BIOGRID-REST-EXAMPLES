@@ -1,0 +1,3 @@
+biogrid:
+    access_key: "ACCESS KEY GOES HERE: YOU CAN GET ONE AT https://webservice.thebiogrid.org/"
+    base_url: "https://webservice.thebiogrid.org"

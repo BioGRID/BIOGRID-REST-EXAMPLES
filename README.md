@@ -20,4 +20,4 @@ Sample code for accessing the BioGRID Rest Service and working with the resultin
 + After completing the configuration steps above. Simply run: **python \<script name\>** at the command prompt. Example: **python get_organisms.py**
 
 ## Examples
-+ [**get_organisms.py**](https://github.com/BioGRID/ORCS-REST-EXAMPLES/blob/master/get_organisms.py) - Obtain currently supported organism ids
++ [**get_organisms.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_organisms.py) - Obtain currently supported organism names and ids

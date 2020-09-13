@@ -12,7 +12,7 @@ from core import config as cfg
 request_url = cfg.BASE_URL + "/interactions"
 
 # Two pubmed IDs to search for
-pubmedList = ["20489023","24142105"] # Breitkreutz A (2010), Parua PK (2014)
+pubmedList = ["20489023", "24142105"]  # Breitkreutz A (2010), Parua PK (2014)
 
 # These parameters can be modified to match any search criteria following
 # the rules outlined in the Wiki: https://wiki.thebiogrid.org/doku.php/biogridrest

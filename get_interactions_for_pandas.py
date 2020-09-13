@@ -24,7 +24,7 @@ params = {
     "geneList": "|".join(geneList),  # Must be | separated
     "searchNames": "true",  # Search against official names
     "includeInteractors": "true",  # Set to true to get any interaction involving EITHER gene, set to false to get interactions between genes
-    "includeInteractorInteractions": "true", # Set to true to get interactions between the geneList’s first order interactors
+    "includeInteractorInteractions": "true",  # Set to true to get interactions between the geneList’s first order interactors
     "taxId": 559292,  # Limit to Saccharomyces cerevisiae
     "evidenceList": "|".join(evidenceList),  # Exclude these two evidence types
     "includeEvidence": "false",  # If false "evidenceList" is evidence to exclude, if true "evidenceList" is evidence to show
@@ -38,17 +38,28 @@ interactions = r.json()
 
 # Create a hash of results by interaction identifier
 data = {}
-for interaction_id, interaction in interactions.items() :
+for interaction_id, interaction in interactions.items():
     data[interaction_id] = interaction
     # Add the interaction ID to the interaction record, so we can reference it easier
     data[interaction_id]["INTERACTION_ID"] = interaction_id
 
 # Load the data into a pandas dataframe
-dataset = pd.DataFrame.from_dict( data, orient='index')
+dataset = pd.DataFrame.from_dict(data, orient="index")
 
 # Re-order the columns and select only the columns we want to see
 
-columns = ['INTERACTION_ID','ENTREZ_GENE_A','ENTREZ_GENE_B','OFFICIAL_SYMBOL_A','OFFICIAL_SYMBOL_B','EXPERIMENTAL_SYSTEM','PUBMED_ID','PUBMED_AUTHOR','THROUGHPUT','QUALIFICATIONS']
+columns = [
+    "INTERACTION_ID",
+    "ENTREZ_GENE_A",
+    "ENTREZ_GENE_B",
+    "OFFICIAL_SYMBOL_A",
+    "OFFICIAL_SYMBOL_B",
+    "EXPERIMENTAL_SYSTEM",
+    "PUBMED_ID",
+    "PUBMED_AUTHOR",
+    "THROUGHPUT",
+    "QUALIFICATIONS",
+]
 dataset = dataset[columns]
 
 # Pretty print out the results

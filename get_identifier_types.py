@@ -6,6 +6,7 @@ Fetch the set of currently supported identifier types
 
 from core import client
 from core import config as cfg
+from core.logger import logger
 
 request_path = "/identifiers"
 
@@ -17,8 +18,8 @@ params = {"accesskey": cfg.ACCESS_KEY, "format": "tab"}
 r = client.get(request_path, params=params)
 identifiers = r.text
 
-# Pretty print out the results
-print(identifiers)
+# Log out the results
+logger.info("\n{}", identifiers)
 
 """
 Expected Output as of version 4.0:

@@ -8,6 +8,7 @@ import json
 
 from core import client
 from core import config as cfg
+from core.logger import logger
 
 request_path = "/organisms"
 
@@ -19,8 +20,8 @@ params = {"accesskey": cfg.ACCESS_KEY, "format": "json"}
 r = client.get(request_path, params=params)
 organisms = r.json()
 
-# Pretty print out the results
-print(json.dumps(organisms, indent=4, sort_keys=True))
+# Log out the results
+logger.info("\n{}", json.dumps(organisms, indent=4, sort_keys=True))
 
 """
 Expected Output as of version 4.0:

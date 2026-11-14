@@ -7,6 +7,7 @@ license = "MIT"
 requires-python = ">=3.12"
 dependencies = [
     "httpx>=0.28.1",
+    "loguru>=0.8.0",
     "pandas>=3.1.1",
     "pyyaml>=6.0.3",
 ]

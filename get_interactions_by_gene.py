@@ -6,6 +6,7 @@ Fetch interactions for a specific gene or gene list
 
 from core import client
 from core import config as cfg
+from core.logger import logger
 
 request_path = "/interactions"
 
@@ -44,8 +45,8 @@ params = {
 r = client.get(request_path, params=params)
 interactions = r.text
 
-# Pretty print out the results
-print(interactions)
+# Log out the results
+logger.info("\n{}", interactions)
 
 """
 Output as of version 4.0:

@@ -6,6 +6,7 @@ Fetch the set of currently supported experimental evidence types
 
 from core import client
 from core import config as cfg
+from core.logger import logger
 
 request_path = "/evidence"
 
@@ -17,8 +18,8 @@ params = {"accesskey": cfg.ACCESS_KEY, "format": "tab"}
 r = client.get(request_path, params=params)
 evidence = r.text
 
-# Pretty print out the results
-print(evidence)
+# Log out the results
+logger.info("\n{}", evidence)
 
 """
 Expected Output as of version 4.0:

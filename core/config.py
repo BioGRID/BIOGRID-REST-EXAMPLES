@@ -8,14 +8,17 @@ from pathlib import Path
 
 import yaml
 
+from core.logger import logger
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 CONFIG_FILE = BASE_DIR / "config" / "config.yml"
 
 if not CONFIG_FILE.is_file():
-    sys.exit(
-        f"Config file not found: {CONFIG_FILE}. "
-        "Copy config/config.sample.yml to config/config.yml and add your access key."
+    logger.error(
+        "Config file not found: {}. Copy config/config.sample.yml to config/config.yml and add your access key.",
+        CONFIG_FILE,
     )
+    sys.exit(1)
 
 with CONFIG_FILE.open(encoding="utf-8") as config_file:
     data = yaml.safe_load(config_file)

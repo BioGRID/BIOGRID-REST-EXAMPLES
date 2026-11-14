@@ -8,6 +8,7 @@ import json
 
 from core import client
 from core import config as cfg
+from core.logger import logger
 
 interaction_id = 439969
 request_path = f"/interactions/{interaction_id}"
@@ -20,8 +21,8 @@ params = {"accesskey": cfg.ACCESS_KEY, "format": "json"}
 r = client.get(request_path, params=params)
 interaction = r.json()
 
-# Pretty print out the results
-print(json.dumps(interaction, indent=4, sort_keys=True))
+# Log out the results
+logger.info("\n{}", json.dumps(interaction, indent=4, sort_keys=True))
 
 """
 Output as of version 4.0:
@@ -63,8 +64,8 @@ params = {"accesskey": cfg.ACCESS_KEY, "format": "tab2", "includeHeader": "true"
 r = client.get(request_path, params=params)
 interaction = r.text
 
-# Pretty print out the results
-print(interaction)
+# Log out the results
+logger.info("\n{}", interaction)
 
 """
 Output as of version 4.0:

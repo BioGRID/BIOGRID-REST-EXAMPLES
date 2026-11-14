@@ -8,6 +8,7 @@ import pandas as pd
 
 from core import client
 from core import config as cfg
+from core.logger import logger
 
 request_path = "/interactions"
 
@@ -61,8 +62,8 @@ columns = [
 ]
 dataset = dataset[columns]
 
-# Pretty print out the results
-print(dataset)
+# Log out the results
+logger.info("\n{}", dataset)
 
 """
 Output as of version 4.0:

@@ -8,6 +8,7 @@ import json
 
 from core import client
 from core import config as cfg
+from core.logger import logger
 
 request_path = "/interactions"
 
@@ -29,8 +30,8 @@ params = {
 r = client.get(request_path, params=params)
 interactions = r.json()
 
-# Pretty print out the results
-print(json.dumps(interactions, indent=4, sort_keys=True))
+# Log out the results
+logger.info("\n{}", json.dumps(interactions, indent=4, sort_keys=True))
 
 """
 Output as of version 4.0:

@@ -1,0 +1,15 @@
+[project]
+name = "biogrid-rest-examples"
+version = "2.0.0"
+description = "Sample code for accessing the BioGRID REST service and working with the resulting datasets"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+dependencies = [
+    "pandas>=3.1.1",
+    "pyyaml>=6.0.3",
+    "requests>=2.34.2",
+]
+
+[tool.uv]
+package = false

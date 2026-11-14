@@ -28,11 +28,11 @@ This installs Python 3.12 (if needed), creates a `.venv` virtual environment, an
 After completing the installation and configuration steps above, run any script with `uv run`:
 
 ```bash
-uv run python get_organisms.py
+uv run get_organisms.py
 ```
 
 + All output, including the API results, is written to stdout through loguru.
-+ Set the `LOG_LEVEL` environment variable to `DEBUG` to also see each request (with your access key redacted), its status, and its timing, e.g. `LOG_LEVEL=DEBUG uv run python get_organisms.py`.
++ Set the `LOG_LEVEL` environment variable to `DEBUG` to also see each request (with your access key redacted), its status, and its timing, e.g. `LOG_LEVEL=DEBUG uv run get_organisms.py`.
 + Requests time out after 30 seconds (10 seconds to connect). An HTTP error status, a timeout, or a missing/invalid access key is logged as an error and the script exits with a non-zero status.
 
 ## Development

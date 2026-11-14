@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 """
 Fetch the set of currently supported identifier types
 """
 
 import requests
-import json
 from core import config as cfg
 
 request_url = cfg.BASE_URL + "/identifiers"

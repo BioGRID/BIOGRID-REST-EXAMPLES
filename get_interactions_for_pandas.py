@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 """
 Fetch interactions for use in a pandas dataframe
 """
 
 import requests
-import json
 import pandas as pd
 from core import config as cfg
 

@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 """
 Fetch the set of currently supported experimental evidence types
 """
 
 import requests
-import json
 from core import config as cfg
 
 request_url = cfg.BASE_URL + "/evidence"

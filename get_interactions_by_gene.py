@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 """
 Fetch interactions for a specific gene or gene list
 """
 
 import requests
-import json
 from core import config as cfg
 
 request_url = cfg.BASE_URL + "/interactions"

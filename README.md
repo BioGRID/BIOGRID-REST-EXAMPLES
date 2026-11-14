@@ -46,11 +46,11 @@ uv run ruff format .
 To add a new dependency, use `uv add <package>` (or `uv add --dev <package>` for development tools).
 
 ## Examples
-+ [**get_experimental_evidence_types.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_experimental_evidence_types.py) - Obtain a list of the supported experimental evidence types in BioGRID
-+ [**get_identifier_types.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_identifier_types.py) - Obtain a list of the supported identifier types in BioGRID
-+ [**get_interaction.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_interaction.py) - Obtain a single interaction record by interaction id
-+ [**get_interactions_by_gene.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_interactions_by_gene.py) - Obtain a list of interactions by one or more gene identifiers
-+ [**get_interactions_by_pubmed.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_interactions_by_pubmed.py) - Obtain a list of interactions by one or more pubmed ids
-+ [**get_interactions_for_pandas.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_interactions_for_pandas.py) - Obtain a list of interactions and add them to a pandas dataframe
-+ [**get_interactions_for_polars.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_interactions_for_polars.py) - Obtain a list of interactions and add them to a polars dataframe
-+ [**get_organisms.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_organisms.py) - Obtain currently supported organism names and ids
++ `uv run` [**get_experimental_evidence_types.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_experimental_evidence_types.py) - Obtain a list of the supported experimental evidence types in BioGRID
++ `uv run` [**get_identifier_types.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_identifier_types.py) - Obtain a list of the supported identifier types in BioGRID
++ `uv run` [**get_interaction.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_interaction.py) - Obtain a single interaction record by interaction id
++ `uv run` [**get_interactions_by_gene.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_interactions_by_gene.py) - Obtain a list of interactions by one or more gene identifiers
++ `uv run` [**get_interactions_by_pubmed.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_interactions_by_pubmed.py) - Obtain a list of interactions by one or more pubmed ids
++ `uv run` [**get_interactions_for_pandas.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_interactions_for_pandas.py) - Obtain a list of interactions and add them to a pandas dataframe
++ `uv run` [**get_interactions_for_polars.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_interactions_for_polars.py) - Obtain a list of interactions and add them to a polars dataframe
++ `uv run` [**get_organisms.py**](https://github.com/BioGRID/BIOGRID-REST-EXAMPLES/blob/master/get_organisms.py) - Obtain currently supported organism names and ids

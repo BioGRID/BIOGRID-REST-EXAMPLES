@@ -4,8 +4,9 @@
 Fetch interactions for use in a pandas dataframe
 """
 
-import requests
 import pandas as pd
+import requests
+
 from core import config as cfg
 
 request_url = cfg.BASE_URL + "/interactions"
@@ -63,7 +64,7 @@ dataset = dataset[columns]
 # Pretty print out the results
 print(dataset)
 
-""" 
+"""
 Output as of version 4.0:
         INTERACTION_ID ENTREZ_GENE_A ENTREZ_GENE_B OFFICIAL_SYMBOL_A OFFICIAL_SYMBOL_B  EXPERIMENTAL_SYSTEM  PUBMED_ID       PUBMED_AUTHOR      THROUGHPUT          QUALIFICATIONS
 80902            80902        855418        856382              CLA4             STE20  Synthetic Lethality   12686605  Goehring AS (2003)  Low Throughput                       -

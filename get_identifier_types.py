@@ -5,6 +5,7 @@ Fetch the set of currently supported identifier types
 """
 
 import requests
+
 from core import config as cfg
 
 request_url = cfg.BASE_URL + "/identifiers"
@@ -20,7 +21,7 @@ identifiers = r.text
 # Pretty print out the results
 print(identifiers)
 
-""" 
+"""
 Expected Output as of version 4.0:
 ANIMALQTLDB
 APHIDBASE

@@ -4,8 +4,10 @@
 Fetch interactions for a specific set of publications
 """
 
-import requests
 import json
+
+import requests
+
 from core import config as cfg
 
 request_url = cfg.BASE_URL + "/interactions"
@@ -31,7 +33,7 @@ interactions = r.json()
 # Pretty print out the results
 print(json.dumps(interactions, indent=4, sort_keys=True))
 
-""" 
+"""
 Output as of version 4.0:
 {
     "1115074": {

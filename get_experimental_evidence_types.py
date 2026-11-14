@@ -5,6 +5,7 @@ Fetch the set of currently supported experimental evidence types
 """
 
 import requests
+
 from core import config as cfg
 
 request_url = cfg.BASE_URL + "/evidence"
@@ -20,7 +21,7 @@ evidence = r.text
 # Pretty print out the results
 print(evidence)
 
-""" 
+"""
 Expected Output as of version 4.0:
 AFFINITY CAPTURE-LUMINESCENCE
 AFFINITY CAPTURE-MS

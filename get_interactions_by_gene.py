@@ -5,6 +5,7 @@ Fetch interactions for a specific gene or gene list
 """
 
 import requests
+
 from core import config as cfg
 
 request_url = cfg.BASE_URL + "/interactions"
@@ -47,7 +48,7 @@ interactions = r.text
 # Pretty print out the results
 print(interactions)
 
-""" 
+"""
 Output as of version 4.0:
 #BioGRID Interaction ID Entrez Gene Interactor A        Entrez Gene Interactor B        BioGRID ID Interactor A BioGRID ID Interactor B Systematic Name Interactor A    Systematic Name Interactor B    Official Symbol Interactor A       Official Symbol Interactor B    Synonyms Interactor A   Synonyms Interactor B   Experimental System     Experimental System Type        Author  Pubmed ID       Organism Interactor A   Organism Interactor B   ThroughputScore    Modification    Phenotypes      Qualifications  Tags    Source Database
 102009  856876  851076  36882   31623   YER136W YLR362W GDI1    STE11   SEC19|L000000699        mitogen-activated protein kinase kinase kinase STE11|L000002118 Affinity Capture-MS     physical        Ho Y (2002)     11805837  559292   559292  High Throughput -       -       -       -       -       BIOGRID

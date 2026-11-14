@@ -4,8 +4,10 @@
 Fetch the set of currently supported organism names and ids
 """
 
-import requests
 import json
+
+import requests
+
 from core import config as cfg
 
 request_url = cfg.BASE_URL + "/organisms"
@@ -21,7 +23,7 @@ organisms = r.json()
 # Pretty print out the results
 print(json.dumps(organisms, indent=4, sort_keys=True))
 
-""" 
+"""
 Expected Output as of version 4.0:
 {
     "10029": "Cricetulus griseus",

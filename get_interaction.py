@@ -4,8 +4,10 @@
 Fetch a single interaction using an interaction ID
 """
 
-import requests
 import json
+
+import requests
+
 from core import config as cfg
 
 interaction_id = 439969
@@ -22,7 +24,7 @@ interaction = r.json()
 # Pretty print out the results
 print(json.dumps(interaction, indent=4, sort_keys=True))
 
-""" 
+"""
 Output as of version 4.0:
 {
     "439969": {
@@ -65,7 +67,7 @@ interaction = r.text
 # Pretty print out the results
 print(interaction)
 
-""" 
+"""
 Output as of version 4.0:
 #BioGRID Interaction ID Entrez Gene Interactor A        Entrez Gene Interactor B        BioGRID ID Interactor A BioGRID ID Interactor B Systematic Name Interactor A    Systematic Name Interactor B    Official Symbol Interactor A       Official Symbol Interactor B    Synonyms Interactor A   Synonyms Interactor B   Experimental System     Experimental System Type        Author  Pubmed ID       Organism Interactor A   Organism Interactor B   ThroughputScore    Modification    Phenotypes      Qualifications  Tags    Source Database
 439969  852931  851396  33287   31905   YGR040W YDL159W KSS1    STE7    mitogen-activated serine/threonine-protein kinase KSS1|L000000922       mitogen-activated protein kinase kinase STE7|L000002117 Affinity Capture-MS     physical   Breitkreutz A (2010)    20489023        559292  559292  High Throughput 1.0     -       -       -       -       BIOGRID

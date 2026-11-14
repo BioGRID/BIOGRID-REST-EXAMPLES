@@ -4,11 +4,10 @@
 Fetch interactions for a specific gene or gene list
 """
 
-import requests
-
+from core import client
 from core import config as cfg
 
-request_url = cfg.BASE_URL + "/interactions"
+request_path = "/interactions"
 
 # List of genes to search for
 geneList = ["STE11", "NMD4"]  # Yeast Genes STE11 and NMD4
@@ -42,7 +41,7 @@ params = {
 # params["throughputTag"] = "any" # any, low, high. If set to low, only `low throughput` interactions will be returned, if set to high, only `high throughput` interactions will be returned
 # params["additionalIdentifierTypes"] = "SGD|FLYBASE|REFSEQ" # You can specify a | separated list of additional identifier types to search against (see get_identifier_types.py)
 
-r = requests.get(request_url, params=params)
+r = client.get(request_path, params=params)
 interactions = r.text
 
 # Pretty print out the results

@@ -5,11 +5,11 @@ Fetch interactions for use in a pandas dataframe
 """
 
 import pandas as pd
-import requests
 
+from core import client
 from core import config as cfg
 
-request_url = cfg.BASE_URL + "/interactions"
+request_path = "/interactions"
 
 # List of genes to search for
 geneList = ["STE11", "NMD4"]  # Yeast Genes STE11 and NMD4
@@ -32,7 +32,7 @@ params = {
 # Additional options to try, you can uncomment them as necessary
 # See "get_interactions_by_gene.py" or https://wiki.thebiogrid.org/doku.php/biogridrest for a list of additional parameter options
 
-r = requests.get(request_url, params=params)
+r = client.get(request_path, params=params)
 interactions = r.json()
 
 # Create a hash of results by interaction identifier

@@ -4,18 +4,17 @@
 Fetch the set of currently supported identifier types
 """
 
-import requests
-
+from core import client
 from core import config as cfg
 
-request_url = cfg.BASE_URL + "/identifiers"
+request_path = "/identifiers"
 
 # These parameters can be modified to match any search criteria following
 # the rules outlined in the Wiki: https://wiki.thebiogrid.org/doku.php/biogridrest
 # In this particular instance, we've chosen just the format to use in tab
 params = {"accesskey": cfg.ACCESS_KEY, "format": "tab"}
 
-r = requests.get(request_url, params=params)
+r = client.get(request_path, params=params)
 identifiers = r.text
 
 # Pretty print out the results

@@ -6,18 +6,17 @@ Fetch the set of currently supported organism names and ids
 
 import json
 
-import requests
-
+from core import client
 from core import config as cfg
 
-request_url = cfg.BASE_URL + "/organisms"
+request_path = "/organisms"
 
 # These parameters can be modified to match any search criteria following
 # the rules outlined in the Wiki: https://wiki.thebiogrid.org/doku.php/biogridrest
 # In this particular instance, we've chosen just the format to use in json
 params = {"accesskey": cfg.ACCESS_KEY, "format": "json"}
 
-r = requests.get(request_url, params=params)
+r = client.get(request_path, params=params)
 organisms = r.json()
 
 # Pretty print out the results

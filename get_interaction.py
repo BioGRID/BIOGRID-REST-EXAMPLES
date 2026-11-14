@@ -6,19 +6,18 @@ Fetch a single interaction using an interaction ID
 
 import json
 
-import requests
-
+from core import client
 from core import config as cfg
 
 interaction_id = 439969
-request_url = cfg.BASE_URL + "/interactions/" + str(interaction_id)
+request_path = f"/interactions/{interaction_id}"
 
 # These parameters can be modified to match any search criteria following
 # the rules outlined in the Wiki: https://wiki.thebiogrid.org/doku.php/biogridrest
 # In this particular instance, we've chosen to return results in json format
 params = {"accesskey": cfg.ACCESS_KEY, "format": "json"}
 
-r = requests.get(request_url, params=params)
+r = client.get(request_path, params=params)
 interaction = r.json()
 
 # Pretty print out the results
@@ -61,7 +60,7 @@ Output as of version 4.0:
 # In this particular instance, we've chosen to return results in tab2 format with a header
 params = {"accesskey": cfg.ACCESS_KEY, "format": "tab2", "includeHeader": "true"}
 
-r = requests.get(request_url, params=params)
+r = client.get(request_path, params=params)
 interaction = r.text
 
 # Pretty print out the results
